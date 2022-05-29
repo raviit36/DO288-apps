@@ -10,14 +10,17 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
-echo "---> Installing application source"
-cp -Rf /tmp/src/*.html ./
+echo "---> Installing Application source" 
 
-DATE=`date "+%b %d, %Y @ %H:%M %p"`
+cp  -Rf  /tmp/src/*.html  ./
 
-echo "---> Creating info page"
-echo "Page built on $DATE" >> ./info.html
-echo "Proudly served by Apache HTTP Server version $HTTPD_VERSION" >> ./info.html
+DATE=`date "+%F"`
+
+echo "---> creating Info page" 
+
+echo "The page was Built on $DATE text given by exam" >> ./info.html
+
+
 
 ######## CUSTOMIZATION ENDS HERE ############
 
