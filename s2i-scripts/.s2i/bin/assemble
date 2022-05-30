@@ -10,19 +10,27 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
-echo "---> Installing Application source" 
+echo  "---> Starting the Application code" 
 
-cp  -Rf  /tmp/src/*.html  ./
+cp -Rf /tmp/src/*.html ./
 
 DATE=`date "+%F"`
 
-echo "---> creating Info page" 
+echo "---> Creating info.html "
 
-echo "The page was Built on $DATE text given by exam" >> ./info.html
+echo "Page was built on $DATE exam text" >> ./info.html
 
 
 
-######## CUSTOMIZATION ENDS HERE ############
+
+
+
+
+
+
+
+
+#######
 
 if [ -d ./httpd-cfg ]; then
   echo "---> Copying httpd configuration files..."
